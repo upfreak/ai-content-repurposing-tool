@@ -1,0 +1,105 @@
+﻿git : remote: error: 
+GH013: Repository 
+rule violations 
+found for 
+refs/heads/main.     
+   
+At line:1 char:31
++ ... 
+GIT_TERMINAL_PROMPT 
+= 0; git push -u 
+origin main --force 
+2>&1 | Out-F ...
++                    
+          ~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~
+~~~~
+    + CategoryInfo   
+           : NotSpe  
+  cified: (remote:   
+  error: ...s/mai    
+n.        :Strin    
+g) [], RemoteExc    
+eption
+    + FullyQualified 
+   ErrorId : Native  
+  CommandError
+ 
+remote: 
+remote: - GITHUB 
+PUSH PROTECTION      
+  
+remote:   ———————————
+—————————————————————
+—————————        
+remote:     Resolve 
+the following 
+violations before 
+pushing again        
+remote: 
+remote:     - Push 
+cannot contain 
+secrets        
+remote: 
+remote:             
+remote:      (?) 
+Learn how to resolve 
+a blocked push       
+ 
+remote:      https://
+docs.github.com/code-
+security/secret-scann
+ing/working-with-secr
+et-scanning-and-push-
+protection/working-wi
+th-push-protection-fr
+om-the-command-line#r
+esolving-a-blocked-pu
+sh        
+remote:             
+remote:             
+remote:       —— 
+Groq API Key ————————
+—————————————————————
+—————————        
+remote:        
+locations:        
+remote:          - 
+commit: 516e99cd806de
+14865c5e10912d6a3c420
+464be7        
+remote:            
+path: backend/.env.cl
+eaned:3        
+remote:             
+remote:        (?) 
+To push, remove 
+secret from 
+commit(s) or follow 
+this URL to allow 
+the secret.        
+remote:        https:
+//github.com/Maheshna
+th09/ai-content-repur
+posing-tool/security/
+secret-scanning/unblo
+ck-secret/37rBS89pk95
+3uKLLfVwOsjBlEdR     
+   
+remote:             
+remote: 
+remote: 
+To https://github.com
+/Maheshnath09/ai-cont
+ent-repurposing-tool.
+git
+ ! [remote rejected] 
+main -> main (push 
+declined due to 
+repository rule 
+violations)
+error: failed to 
+push some refs to 'ht
+tps://github.com/Mahe
+shnath09/ai-content-r
+epurposing-tool.git'
