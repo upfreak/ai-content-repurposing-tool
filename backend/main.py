@@ -31,11 +31,11 @@ app = FastAPI(
     lifespan=lifespan
 )
 
-# Configure CORS - Temporarily allow all origins for development
+# Configure CORS - Use settings for production
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],  # Allow all origins for development
-    allow_credentials=False,  # Must be False when using wildcard origins
+    allow_origins=settings.ALLOWED_ORIGINS,  # Uses environment variable in production
+    allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
     expose_headers=["*"],

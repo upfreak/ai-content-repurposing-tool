@@ -32,12 +32,18 @@ class Settings:
         )
         self.GROQ_MODEL = os.getenv('GROQ_MODEL', 'llama-3.3-70b-versatile')
 
-        # CORS
-        self.ALLOWED_ORIGINS = [
-            'http://localhost:3000',
-            'http://localhost:3001',
-            'http://127.0.0.1:3000',
-        ]
+        # CORS - Read from environment variable for production
+        origins_env = os.getenv('ALLOWED_ORIGINS', '')
+        if origins_env:
+            # Split comma-separated origins from environment
+            self.ALLOWED_ORIGINS = [origin.strip() for origin in origins_env.split(',')]
+        else:
+            # Default development origins
+            self.ALLOWED_ORIGINS = [
+                'http://localhost:3000',
+                'http://localhost:3001',
+                'http://127.0.0.1:3000',
+            ]
 
         # File upload
         self.UPLOAD_DIR = os.getenv('UPLOAD_DIR', 'uploads')
